@@ -1,0 +1,18 @@
+
+<label style="display: inline-flex; align-items: center; font-size: 4em;">
+  <input type="checkbox" [(ngModel)]="Run" style="width: 4em; height: 4em; margin-right: 0.2em;">
+  run{{Counter}}
+</label>
+
+<label style="display: inline-flex; align-items: center; font-size: 4em;">
+  <input type="checkbox" [(ngModel)]="TogglePage" style="width: 4em; height: 4em; margin-right: 0.2em;">
+  toggle
+</label>
+
+<!-- Switch pages every few seconds -->
+@if ( TogglePage ) {
+  <app-page1></app-page1>
+}
+@else {
+  <app-page2></app-page2>
+}
