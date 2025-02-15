@@ -65,6 +65,7 @@ export class PdfMeFormComponent implements AfterViewInit,OnDestroy {
       this.dom.parentNode.removeChild(this.dom);
     }
     this.dom = undefined;
+    this.MyFont = undefined; // This isn't a necessary process, but just in case.
   }
 
 
@@ -97,7 +98,7 @@ export class PdfMeFormComponent implements AfterViewInit,OnDestroy {
   };
 
 
-  MyFont: Font =  {...this.fontSeed};
+  MyFont: Font | undefined =  {...this.fontSeed};
   /*
   Loading fonts in the public folder
    */
